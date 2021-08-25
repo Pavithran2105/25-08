@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud5</title>
+</head>
+<body>
+    <h1>Add Employee Details</h1>
+    <!-- <input type="text" id="A" placeholder="employee id"> -->
+    <input type="text" id="B" placeholder="employee name">
+    <input type="text" id="C" placeholder="age">
+    <input type="text" id="D" placeholder="designation">
+    <button onclick="myFunction()">add</button>
+
+    <table border="1" id="myTable">
+        <thead>
+            <th>employee id</th>
+            <th>employee name</th>
+            <th>age</th>
+            <th>designation</th>
+            <th><button onclick="del()">DEL</button></th>
+        </thead>
+    </table>
+    <script>
+    // var a = [1,2,3,4,5,6,7];
+    
+
+        function myFunction()
+        {
+            var tbl = document.getElementById("myTable");
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+            var cell3 = row.insertCell();
+            var cell4 = row.insertCell();
+
+            
+            for(var i=1;i<8;i++){
+            
+            
+            cell1.innerHTML = document.write(i);
+            cell2.innerHTML = document.getElementById("B").value;
+            cell3.innerHTML = document.getElementById("C").value;
+            cell4.innerHTML = document.getElementById("D").value;
+
+            }       
+        
+        }
+    </script>
+</body>
+</html>
